@@ -1,0 +1,131 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Objetos anidados</title>
+    <link rel="stylesheet" href="main.css">
+</head>
+
+<audio src="DBZ.mp3"></audio>
+    <audio controls>
+        <source src="DBZ.mp3" type="audio/mpeg">
+        <object type="application/x-shockwave-flash" data="player.swf?miArchivo=mi-archivo-de-audio.mp3">
+            <param name="movie" value="player.swf?miArchivo=mi-archivo-de-audio.mp3">
+            <a href="DBZ.mp3">Descárgate aquí mi archivo de audio</a>
+        </object>
+</audio>
+
+<body>
+    <div class="serie">
+        <a href="https://www.youtube.com/watch?v=cie7scVUdQE">
+            <img src="https://fontmeme.com/permalink/210520/0ffc0a456a280ba630962a780c0ace6e.png"
+            alt="dragon-ball-z-font" borde="0"></a>
+            <a href="https://www.youtube.com/watch?v=4EPnL5oVnaw">
+                <img src="https://fontmeme.com/permalink/210520/bd69a15b7de814ed02c00c08c1476dc4.png" 
+                alt="dragon-ball-z-font" borde="0"></a>
+
+        <p>Capitulos:<br>
+            <span id="capitulos"></span>
+        </p>
+
+        <p>Razas:<br>
+            <span id="Razas1"></span><br>
+            <span id="Razas2"></span><br>
+            <span id="Razas3"></span><br>
+            <span id="Razas4"></span>
+        </p>
+
+        <p>Poder:<br>
+            <span id="Pw1"></span><br>
+            <span id="Pw2"></span><br>
+            <span id="Pw3"></span><br>
+            <span id="Pw4"></span>
+        </p>
+
+        <p>Extras:<br>
+            <span id="extra1"></span> <br>
+            <span id="extra2"></span> <br>
+            <span id="extra3"></span> <br>
+        </p>
+        
+    </div>
+    
+   
+    <footer> <img src="https://fontmeme.com/permalink/210520/608159e067d3f7ba5bb5ffc0c6286ebf.png" alt=""></footer>
+    <script src="./main.js"></script>
+</body>
+</html>
+.serie {
+    width: 80%;
+    height: 900px;
+    padding: 10px;
+    margin: 25px auto;
+    border: 1px solid rgb(65, 161, 145);
+    border-radius: 20px;
+    background-image: url(./S.png);
+    background-repeat: no-repeat;
+}
+p {
+    text-align: center;
+    padding-bottom: 10px;
+    font-family: 'Open Sans', sans-serif;
+    color: rgb(207, 104, 36);
+    font-size: 26px;
+}
+span {
+    font-weight: 400;
+    color: rgb(0, 0, 0);
+}
+img{
+    display:block;
+    margin:auto;
+}
+
+// Crear un objeto llamado personaje de su anime o serie favorita
+// *Agregar al menos 5 propiedades
+// *Agregar al menos un objeto anidado
+// *Sacar 3 propiedades del objeto por medio del método destructuring
+// *Pintar en la página cada elemento del objeto a modo de indicador
+// *Tomar captura del código, del resultado en la página y de la consola del navegador
+// *Subir documento con extensión .pdf a la asignación en Moodle
+const serie = {
+    
+    capitulos: "291" ,
+    Razas: {
+        R1:"Raza de Freezer",
+        R2: "Namekianos",
+        R3: "Majin" ,
+        R4: "Saiyajins"
+    },
+    Poder: {
+        Pw1: "120,000,00",
+        Pw2: "35000",
+        Pw3: "1,195,000,000,000",
+        Pw4: "15,000 en base hasta 2,000,000,000,000"
+    },
+    extras: {
+        extra1: "Los namekianos poseen las esferas del dragon",
+        extra2: "Goku casi siempre salva a todos",
+        extra3: "Goku y Vegeta crean a Vegito y Gogeta"
+    }
+}
+// parte 1
+document.querySelector("#capitulos").innerHTML = serie.capitulos;
+document.querySelector("#Razas1").innerHTML = serie.Razas.R1;
+document.querySelector("#Razas2").innerHTML = serie.Razas.R2;
+document.querySelector("#Razas3").innerHTML = serie.Razas.R3;
+document.querySelector("#Razas4").innerHTML = serie.Razas.R4;
+// parte 2
+document.querySelector("#Pw1").innerHTML = serie.Poder.Pw1;
+document.querySelector("#Pw2").innerHTML = serie.Poder.Pw2;
+document.querySelector("#Pw3").innerHTML = serie.Poder.Pw3;
+document.querySelector("#Pw4").innerHTML = serie.Poder.Pw4;
+// 
+document.querySelector("#extra1").innerHTML = serie.extras.extra1;
+document.querySelector("#extra2").innerHTML = serie.extras.extra2;
+document.querySelector("#extra3").innerHTML = serie.extras.extra3;
+
+
+// document.querySelector(".lap").innerHTML = datoslap;
